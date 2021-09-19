@@ -2,7 +2,7 @@
 
 //write function code here
 
-double get_sales_tax(double meal_amount, double tax_rate)
+double get_sales_tax_amount(double meal_amount)
 {
 	return meal_amount * (tax_rate/100);
 }
