@@ -1,6 +1,6 @@
 ﻿const double tax_rate = 0.675;
 
-//write function prototype here
+//write function prototype
 
 double get_sales_tax_amount(double meal_amount);
 

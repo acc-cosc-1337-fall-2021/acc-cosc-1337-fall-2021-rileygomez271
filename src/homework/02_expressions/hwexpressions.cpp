@@ -1,6 +1,6 @@
 #include "hwexpressions.h"
 
-//write function code here
+//write function code for sales tax and tip amount
 
 double get_sales_tax_amount(double meal_amount)
 {

@@ -19,7 +19,7 @@ int main()
 	double tip_amount;
 	double tax_amount;
 	double total_cost;
-	// purpose of the program
+	// purpose of this program
 	cout<< "This programs calculates the bill for a restaurant with sales tax and tip included. .\n";
 
 	// get the cost of the meal and the tip rate
@@ -36,7 +36,7 @@ int main()
 
 	total_cost = meal_amount + tax_amount + tax_rate;
 
-	//output to the user
+	//outputs to the user
 	cout << "\n";
 	cout << "Your receipt\n";
 	cout << "Meal amount:  $" << meal_amount << "\n";
