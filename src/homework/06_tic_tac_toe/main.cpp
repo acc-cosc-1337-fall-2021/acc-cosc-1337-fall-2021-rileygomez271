@@ -1,34 +1,32 @@
-#include <iostream>
-#include <vector>
-#include "string"
 #include "tic_tac_toe.h"
-using std::string; using std::cout; using std::cin;
-using std::cin;
+
+using std::cin;  using std::cout; using std::string;
+
 int main() 
 {
-	std::string first_player;
-	int position;
-	int loop=0;
-	int repeat=1;
-	bool getout=false;
-	TicTacToe instance;
-	while (repeat==1)
+	string first_player;
+	char choice;
+	TicTacToe game;
+
+	do
 	{
-		cout<<"Press X or O for the player one: "<<"\n";
+		cout<<"First player, select X or O: ";
 		cin>>first_player;
-		instance.start_game(first_player);
-		instance.display_board();
-		while (getout!=true)
+		game.start_game(first_player);
+		int position;
+
+		while(game.game_over() == false)
 		{
-			cout<<"Player: "<<instance.get_player()<<"'s turn, Select a space to fill from 1 to 9"<<"\n";
+			cout<<"Enter a position from 1-9: ";
 			cin>>position;
-			instance.mark_board(position); 
-			instance.display_board();
-			getout=instance.game_over();
+			game.mark_board(position);
+			game.display_board();
 		}
-		cout<<"Game over, press 1 to play again, 2 to exit "<<"\n";
-		cin>>repeat;
+
+		cout<<"Do you want to quit? If yes, press n: ";
+		cin>>choice;
 	}
-	cout<<"End of program"<<"\n";
+	while(choice == 'N');
+
 	return 0;
 }
